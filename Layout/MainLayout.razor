@@ -1,0 +1,50 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+
+    
+    <div class="sidebar @(isSidebarOpen ? "open" : "closed")">
+        <NavMenu />
+    </div>
+
+    
+    
+
+    <main>
+        
+        <div class="top-row px-4">
+            <button class="menu-toggle" @onclick="ToggleSidebar" >
+                ☰
+            </button>
+
+        
+            <NavLink class="top-row-home-link" href="" Match="NavLinkMatch.All">
+                    <span class="bi bi-house-door-fill bi-nav-icon"></span>
+            </NavLink>
+         
+            <div class="about-link">
+                <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            </div>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+
+    </main>
+</div>
+
+
+
+@code{
+
+    private bool isSidebarOpen = false;
+
+    private void ToggleSidebar()
+    {
+        isSidebarOpen = !isSidebarOpen;
+    }
+
+
+
+}

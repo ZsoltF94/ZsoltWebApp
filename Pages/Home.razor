@@ -1,0 +1,137 @@
+﻿
+
+@page "/"
+@using ToDoWebApp.Pages
+
+<PageTitle>Home</PageTitle>
+
+<!-- Title -->
+<h1 class="home-title">Zsolt Fischer</h1>
+
+<!-- Buttons row1 -->
+<div class="home-nav-link-container">
+
+    <!-- About me -->
+    <NavLink class="home-nav-link" href="about-me">
+        <div class="image-container">
+            <img src="images/Bewerbungs-Foto.jpg" alt="About" />
+            <div class="overlay-text">About me</div>
+
+        </div>
+    </NavLink>
+
+</div>
+
+<!-- Projects Title -->
+<div class="section-devider">
+    <h1 class="home-title">Projects</h1>
+</div>
+
+
+<!-- Buttons row2 -->
+<div class="home-nav-link-container">
+
+    <!-- ToDo-List -->
+    <NavLink class="home-nav-link" href="todo-list">
+        <span class="bi bi-clipboard-fill bi-nav-icon-home"></span>
+        <span class="overlay-text">ToDo-List</span>
+    </NavLink>
+
+    <!-- CV -->
+    <NavLink class="home-nav-link" href="tower-hero">
+        <span class="bi bi-unity bi-nav-icon-home"></span>
+        <span class="overlay-text">Tower Hero</span>
+    </NavLink>
+
+    <!-- Website -->
+    <NavLink class="home-nav-link">
+        <span class="bi bi-file-code-fill bi-nav-icon-home"></span>
+        <span class="overlay-text">This Page</span>
+    </NavLink>
+
+
+</div>
+
+<style>
+
+    .home-title{
+        color: white;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .home-nav-link-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-nav-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.267);
+        color: white;
+        border: none;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 300px;
+        height: 500px;
+        transition: background-color 0.2s ease;
+        transition: box-shadow 0.5s ease;
+        
+    }
+
+    .home-nav-link:hover{
+        cursor: pointer;
+        box-shadow: 0 0 15px 4px rgba(163, 189, 209, 0.973);
+        transition: box-shadow 0.5s ease;
+        
+    }
+     
+     .image-container{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    .image-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .overlay-text{
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-shadow: 0 0 8px black;
+        pointer-events: none; 
+        z-index: 2;
+    }
+
+    .bi-nav-icon-home{
+        font-size: 4rem;
+    }
+
+    .section-devider{
+        width: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(240, 248, 255, 0.24);
+        border-radius: 10px;
+    }
+</style>
+
+

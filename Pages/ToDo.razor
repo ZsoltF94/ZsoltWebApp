@@ -1,0 +1,299 @@
+@page "/todo-list"
+
+
+
+
+<div class="outer-container">
+    <div class="todolist-body">
+
+        
+
+        
+        <!-- Task Input-->
+        <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+            <input class= "task-input" @bind="newTask" placeholder="Enter new task..."/>
+            <textarea class="task-description-input" @bind="newDescription" placeholder="Enter description..." rows="2"  ></textarea>
+            <select class="select" @bind="newPrio">
+                <option value="low">Low</option>
+                <option value="normal">Normal</option>
+                <option value="high">High</option>
+            </select>
+            <button class="bi bi-plus-circle-fill todo-icon" @onclick="AddTask" ></button>
+        </div>
+
+
+        <!-- Prio Filter-->
+        <h5 style="color: #cddae6" >Prio-Filter</h5>
+        <div style="margin-bottom: 1rem;
+                    margin-top: 0rem;">
+            <select class="select" @bind="prioFilter">
+                <option value="all">All</option>
+                <option value="low">Low</option>
+                <option value="normal">Normal</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+
+
+
+        <!-- Outer Container Table --> 
+        <div style="display: flex; gap: 1rem;min-height: 440px;
+                    width: 700px;">
+
+            <!-- Left Side of Table -->
+            <div style="width: 50%">    
+
+                <!-- Title Open -->
+                <h4 class="column-title-open">Open</h4>
+            
+                @foreach(var task in tasks.Where(task =>        
+                                                    (!task.IsDone && prioFilter == "all" || task.Prio == prioFilter && !task.IsDone )))
+                {
+                    <!-- Open Tasks -->
+                        
+                    <div class="task-item" 
+                        draggable="true"
+                        style="flex: 0 0 300px;">
+                        
+                            
+                        <!-- checkbox  -->
+                        <input style="margin-right: 0.5rem;"type="checkbox" @bind="task.IsDone"/>
+                                
+                        <!-- Task name -->
+                        <span style="color: #cddae6">@task.TaskName</span>
+                        <!-- Prio -->       
+                        <strong>                   
+                            <span style="font-size: x-large; margin-left: 0.5rem; color: @(task.Prio switch
+                            {
+                                "high" => "red",
+                                "normal" => "orange",
+                                "low" => "green",
+                                _=> ""
+                            })">        
+                            ●
+                            </span>
+                        </strong>
+
+                        <br />
+
+                        <!-- Container for Description box-shadow & Delete Button line-up -->
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">      
+                            <div>
+                                <!-- Description -->
+                                <textarea class="task-description-input" @bind="task.TaskDescription"
+                                    rows="2"
+                                    style="color: rgb(131, 127, 127); 
+                                            resize: height;
+                                            width: 100%">     
+                                    
+                                </textarea>
+                            </div>
+
+                            <div>   
+                                <!-- Delete Button -->
+                                <button class="delete-btn" @onclick="@(() =>DeleteTask(task))">       
+                                    🗑
+                                </button><br />
+                            </div>
+                                
+                        </div> 
+                    </div>                                 
+                }
+            </div>
+
+            <!-- Separator Line -->
+            <div style="width: 1px; background-color: #ccc; height: auto;">
+                
+            </div>
+
+
+
+            <!-- Right Side of Table -->
+            <div style="width: 50%">    
+
+                <!-- Title Open -->
+                <h4 class="column-title-done">Done</h4>
+            
+                @foreach(var task in tasks.Where(task =>        
+                                                    (task.IsDone && prioFilter == "all" || task.Prio == prioFilter && task.IsDone  )))
+                {
+                    <!-- Done Tasks -->
+                        
+                    <div class="task-item" 
+                        draggable="true"
+                        style="flex: 0 0 300px;">
+                        
+                            
+                        <!-- checkbox  -->
+                        <input style="margin-right: 0.5rem;"type="checkbox" @bind="task.IsDone"/>
+                                
+                        <!-- Task name -->
+                        <span style="color: white;">@task.TaskName</span>
+                        <!-- Prio -->       
+                        <strong>                   
+                            <span style="font-size: x-large; margin-left: 0.5rem; color: @(task.Prio switch
+                            {
+                                "high" => "red",
+                                "normal" => "orange",
+                                "low" => "green",
+                                _=> ""
+                            })">        
+                            ●
+                            </span>
+                        </strong>
+
+                        <br />
+
+                        <!-- Container for Description box-shadow & Delete Button line-up -->
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">      
+                            <div>
+                                <!-- Description -->
+                                <textarea class="task-description-input" @bind="task.TaskDescription"      
+                                    rows="2"
+                                    style="color: rgb(131, 127, 127); 
+                                            resize: both;
+                                            width: 100%;">
+                                </textarea>
+                            </div>
+
+                            <div>   
+                                <!-- Delete Button -->
+                                <button class="delete-btn" @onclick="@(() =>DeleteTask(task))">       
+                                    🗑
+                                </button><br />
+                            </div>
+                                
+                        </div> 
+                    </div>                                 
+                }
+            </div>
+
+        </div>  
+    </div>
+
+</div>
+
+
+<style>
+    .delete-btn{ 
+        background-color: rgb(220, 20, 60);
+        color: aliceblue;
+        border: none;
+        padding: 0.4rem 0.6rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .delete-btn:hover
+    {
+        background-color: darkred;
+    }
+
+    .column-title-done
+    {
+        background-color: rgb(99, 255, 99);
+        width: 100%;
+        color: aliceblue;
+        border: none;
+        padding: 0.4rem 0.6rem;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+    }
+
+    .column-title-open
+    {
+        background-color: rgb(255, 99, 99);
+        width: 100%;
+        color: aliceblue;
+        border: none;
+        padding: 0.4rem 0.6rem;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+    }
+
+    .task-item
+    {
+        padding: 0.5rem;
+        border-radius: 6px;
+        transition: box-shadow 0.2s ease; background-color: 0.2s ease;
+
+    }
+
+    .task-item:hover{
+    
+        background-color: rgba(255, 255, 255, 0.05); /* leicht aufhellen */
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+        cursor: grab;
+    }
+
+    .todolist-body{
+        
+        width: 742px;
+        padding: 20px;
+        min-height: 70vh;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.233);
+        border-radius: 10px;
+        box-shadow: 0 0 15px 4px rgba(83, 125, 145, 0.123);
+        
+    }
+
+    .outer-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .bi-plus-circle-fill{
+        background-color: #5f89ac00;
+        color: white;
+        border: none;
+        border-radius: 10000px;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .bi-plus-circle-fill:hover{
+        box-shadow: 0 0 4px 4px rgba(105, 149, 167, 0.589);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .task-input{
+        background-color: #bac9d6;
+        color: #464646;
+        border-radius: 8px;
+        border: none;        
+    }
+
+    .task-description-input{
+        background-color: #bac9d6;
+        color: #464646;
+        border-radius: 8px;
+        border: none; 
+    }
+
+    .select{
+        background-color: #bac9d6;
+        border-radius: 8px;
+        border: none; 
+    }
+    
+
+ 
+
+
+</style>
+
+
+
+
+
+
+    
+
+<!-- List end -->
+
+
+
+
