@@ -1,7 +1,7 @@
 # Portfolio Web App
 
 This is a personal portfolio web application built with **Blazor**. It showcases my work and skills as a software developer. The site includes multiple sections, such as an interactive ToDo list, a résumé, and individual project showcases.
-The portfolia is available at https://brave-bush-0c0771610.2.azurestaticapps.net/
+The portfolio is available at https://brave-bush-0c0771610.2.azurestaticapps.net/
 
 ---
 
