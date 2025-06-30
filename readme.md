@@ -15,9 +15,6 @@ The homepage serves as a central hub and includes:
   - Tower Hero (Unity project preview)
   - This Page (showcase of the portfolio site itself)
 
-![Homepage](./screenshots/home.png)
-![Homepage Sidebar](./screenshots/home-sidebar.png)
-
 ---
 
 ## About Me Page
@@ -29,8 +26,6 @@ The About Me page includes my professional background, education, skills and cer
 - Core skills (Languages, frameworks, databases)
 - Certifications
 
-![About](./screenshots/about.png)
-
 ---
 
 ## ToDo List
@@ -41,8 +36,6 @@ A fully functional task board written in Blazor. Key features include:
 - Task filtering by priority
 - Task status switching (Open / Done)
 - Responsive input
-
-![ToDo](./screenshots/todo.png)
 
 ---
 
@@ -61,8 +54,6 @@ A fully functional task board written in Blazor. Key features include:
 - [ ] Multilanguage support
 - [ ] Persistence via LocalStorage or external API
 - [ ] Unit and integration tests
-
-![Planned](./screenshots/planned.png)
 
 ---
 
@@ -86,7 +77,7 @@ This application was built to:
 
 ## Author
 
-**Zsolt Fischer** – [LinkedIn / GitHub profiles to be inserted]
+**Zsolt Fischer** 
 
 ---
 
