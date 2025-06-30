@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/zsolt/Documents/CodingProjects/ToDoWebApp/Pages/This_Page.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhpc19QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/zsolt/Documents/CodingProjects/ToDoWebApp/Pages/ToDo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9Eby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

@@ -2,6 +2,84 @@
 
 <div class="tower-hero-body">
 
+    <div class="tower-hero-description">
+        <section>
+            <h1 id="tower-defender-tryout">Tower Defender TryOut</h1>
+            <p>A classic tower defense game built with Unity. Defend your base against waves of incoming enemies by strategically placing and upgrading towers.</p>
+            <hr>
+            <h2 id="author">Author</h2>
+            <p><strong>ZsoltF94</strong><br>GitHub: <a href="https://github.com/ZsoltF94">github.com/ZsoltF94</a></p>
+            <hr>
+            <h2 id="features">Features</h2>
+            <ul>
+                <li>Simple tower placement system</li>
+                <li>Player with multiple bullet types and combinations</li>
+                <li>Multiple enemy types with health management</li>
+                <li>Projectile-based combat</li>
+                <li>Wave system with increasing difficulty</li>
+                <li>Intuitive user interface</li>
+            </ul>
+            <hr>
+            <h2 id="screenshot">Screenshot</h2>
+            <img style="width: 700px;"src="images/Tower_Hero.png" alt="Gameplay Screenshot">
+            <hr>
+            <h2 id="project-status">Project Status</h2>
+            <p>This project is currently in the <strong>prototyping phase</strong>. The goal is to create a solid foundation for a full-featured tower defense game. New features are being added and existing components are being improved.</p>
+            <hr>
+            <h2 id="requirements">Requirements</h2>
+            <ul>
+                <li><strong>Unity Version:</strong> 2022.x or newer (tested with Unity 6)</li>
+                <li><strong>IDE:</strong> Visual Studio / VS Code</li>
+                <li><strong>Packages:</strong> Only standard Unity packages</li>
+            </ul>
+            <hr>
+            <h2 id="getting-started">Getting Started</h2>
+            <ol>
+                <li>Clone the repository:
+                    <pre>
+                        <code class="lang-bash">git 
+                            <span class="hljs-keyword">clone</span> 
+                            <span class="hljs-title">https</span>://github.com/ZsoltF94/TowerDefender_TryOut.git
+                        </code>
+                    </pre>
+                </li>
+                <li>Open it in Unity (<code>File &gt; Open Project</code>)</li>
+                <li>Open the <code>SampleScene</code> under <code>Assets/Scenes</code></li>
+                <li>Press the Play button — and you&#39;re good to go!</li>
+            </ol>
+            <hr>
+            <h2 id="project-structure-excerpt-">Project Structure (Excerpt)</h2>
+            <pre><code class="lang-plaintext">Assets/
+            ├── Scripts/         → All gameplay scripts
+            ├── Prefabs/         → Tower, Enemy, Bullet prefabs
+            ├── Scenes/          → Main scene
+            ├── Sprites/         → <span class="hljs-number">2</span>D assets
+            ├── UI/              → <span class="hljs-keyword">User</span> <span class="hljs-title">interface</span> elements
+            </code></pre>
+            <hr>
+            <h2 id="-roadmap-todos">📋 Roadmap / ToDos</h2>
+            <ul>
+            <li>[x] Enemy movement</li>
+            <li>[x] Towers with projectiles</li>
+            <li>[x] Enemy health display</li>
+            <li>[ ] Tower upgrades</li>
+            <li>[ ] Multiple tower types</li>
+            <li>[ ] Player upgrades</li>
+            <li>[ ] Bullet upgrades</li>
+            <li>[ ] Multiple Bullet types</li>
+            <li>[ ] Grid-based tower placement</li>
+            <li>[ ] UI and menu improvements</li>
+            <li>[ ] Sound effects &amp; music</li>
+            <li>[ ] High score system</li>
+            </ul>
+            <hr>
+            <hr>
+            
+
+        </section>
+    </div>
+
+
 </div>
 
 
@@ -14,9 +92,15 @@
         margin: 50px auto;
         min-height: 70vh;
         height: auto;
+        padding: 20px;
         background-color: rgba(0, 0, 0, 0.37);
 
         border-radius: 10px;
-
     }
+
+
+    .tower-hero-description{
+        color: white;
+    }
+
 </style>
