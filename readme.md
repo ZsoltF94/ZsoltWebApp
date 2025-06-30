@@ -83,7 +83,7 @@ This application was built to:
 
 ## License
 
-MIT License (or specify if different)
+MIT License 
 
-Feel free to fork or use for your own portfolio setups!
+
 
