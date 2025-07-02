@@ -3239,10 +3239,10 @@ C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\ToDoWebApp.dll
 C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\refint\ToDoWebApp.dll
 C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\ToDoWebApp.pdb
 C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\ref\ToDoWebApp.dll
-C:\Users\zsolt\source\repos\ToDoWebApp\bin\Debug\net9.0\wwwroot\_framework\ToDoWebApp.2tac5v16x0.wasm
-C:\Users\zsolt\source\repos\ToDoWebApp\bin\Debug\net9.0\wwwroot\_framework\ToDoWebApp.ixri9us8i2.pdb
-C:\Users\zsolt\source\repos\ToDoWebApp\bin\Debug\net9.0\wwwroot\_framework\ToDoWebApp.2tac5v16x0.wasm.gz
-C:\Users\zsolt\source\repos\ToDoWebApp\bin\Debug\net9.0\wwwroot\_framework\ToDoWebApp.ixri9us8i2.pdb.gz
-C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\compressed\k9w3ibid6y-2tac5v16x0.gz
-C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\compressed\05waas87sv-ixri9us8i2.gz
-C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\compressed\56xbd6qi2d-gulwbmk0hg.gz
+C:\Users\zsolt\source\repos\ToDoWebApp\bin\Debug\net9.0\wwwroot\_framework\ToDoWebApp.65dmg02zvw.wasm
+C:\Users\zsolt\source\repos\ToDoWebApp\bin\Debug\net9.0\wwwroot\_framework\ToDoWebApp.0j3pj9zkcs.pdb
+C:\Users\zsolt\source\repos\ToDoWebApp\bin\Debug\net9.0\wwwroot\_framework\ToDoWebApp.65dmg02zvw.wasm.gz
+C:\Users\zsolt\source\repos\ToDoWebApp\bin\Debug\net9.0\wwwroot\_framework\ToDoWebApp.0j3pj9zkcs.pdb.gz
+C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\compressed\k9w3ibid6y-65dmg02zvw.gz
+C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\compressed\05waas87sv-0j3pj9zkcs.gz
+C:\Users\zsolt\source\repos\ToDoWebApp\obj\Debug\net9.0\compressed\56xbd6qi2d-tivs20l3sf.gz
