@@ -1762,11 +1762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zsolt\\Documents\\CodingProjects\\ToDoWebApp\\ToDoWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\zsolt\\source\\repos\\ToDoWebApp\\ToDoWebApp.csproj",
       "projectName": "ToDoWebApp",
-      "projectPath": "C:\\Users\\zsolt\\Documents\\CodingProjects\\ToDoWebApp\\ToDoWebApp.csproj",
+      "projectPath": "C:\\Users\\zsolt\\source\\repos\\ToDoWebApp\\ToDoWebApp.csproj",
       "packagesPath": "C:\\Users\\zsolt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zsolt\\Documents\\CodingProjects\\ToDoWebApp\\obj\\",
+      "outputPath": "C:\\Users\\zsolt\\source\\repos\\ToDoWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zsolt\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1777,6 +1777,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4jK3fMfzOfU=",
+  "dgSpecHash": "ClKTCXDoLgY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\zsolt\\Documents\\CodingProjects\\ToDoWebApp\\ToDoWebApp.csproj",
+  "projectFilePath": "C:\\Users\\zsolt\\source\\repos\\ToDoWebApp\\ToDoWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zsolt\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.6\\microsoft.aspnetcore.authorization.9.0.6.nupkg.sha512",
     "C:\\Users\\zsolt\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.6\\microsoft.aspnetcore.components.9.0.6.nupkg.sha512",

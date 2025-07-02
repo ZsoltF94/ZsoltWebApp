@@ -1,0 +1,88 @@
+@page "/contacts"
+
+<div class="page-text-box">
+
+    <span style="color: white;">
+
+
+        <h1 id="contact-book">Contact Book</h1>
+        <p>This is a Windows Forms application written in C#.<br>It allows users to manage contacts with the following fields:</p>
+        <ul>
+            <li>First name</li>
+            <li>Last name</li>
+            <li>Phone number</li>
+            <li>Email</li>
+        </ul>
+        <hr>
+        <h2 id="author">Author</h2>
+        <p><strong>ZsoltF94</strong><br>GitHub: <a href="https://github.com/ZsoltF94/contacts">github.com/ZsoltF94/contacts</a></p>
+        <hr>
+        <h2 id="screenshot">Screenshot</h2>
+        <p><img class="images" src="images/screenshot_contacts_app.png" alt="contacts_app_screenshot"></p>
+        <hr>
+        <h2 id="purpose">Purpose</h2>
+        <p>The purpose of this project was to learn how to:</p>
+        <ul>
+            <li>Build a graphical user interface using WinForms</li>
+            <li>Structure a C# project with reusable classes</li>
+            <li>Connect to a PostgreSQL database from C#</li>
+            <li>Store and retrieve real data using SQL</li>
+            <li>Deploy a functional app with persistent storage</li>
+        </ul>
+        <p>This project served as a practical exercise in integrating database operations into a real-world application.</p>
+        <hr>
+        <h2 id="features">Features</h2>
+        <ul>
+            <li>Custom layout with rounded window corners and no system border</li>
+            <li>Add, search and delete contacts via graphical interface</li>
+            <li>PostgreSQL database integration for persistent storage</li>
+            <li>Load all contacts on application startup</li>
+            <li>Clean separation of UI and data access</li>
+        </ul>
+        <hr>
+        <h2 id="technologies">Technologies</h2>
+        <ul>
+            <li>.NET WinForms (.NET 6+)</li>
+            <li>C#</li>
+            <li>PostgreSQL</li>
+            <li>Npgsql (ADO.NET provider for PostgreSQL)</li>
+        </ul>
+        <hr>
+        <h2 id="getting-started">Getting Started</h2>
+        <ol>
+            <li>Install PostgreSQL and create a database named <code>kontaktbuch</code></li>
+            <li>Execute the following SQL statement to create the table:</li>
+        </ol>
+       <ul>
+            CREATE TABLE kontakte (
+            <ul>
+                id SERIAL PRIMARY KEY, <br>
+                name TEXT NOT NULL, <br> 
+                lastname TEXT, <br>
+                phone TEXT, <br>
+                email TEXT 
+            </ul>
+            );
+       </ul>
+
+    </span>
+
+
+</div>
+
+<style>
+    .page-text-box{
+        width: 50rem;
+        margin: 50px auto; 
+        min-height: 70vh;
+        height: auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.37);
+        border-radius: 20px;
+        box-shadow: 0 0 15px 4px rgba(123, 175, 224, 0.13); 
+    }
+
+    .images{
+        border-radius: 10px;
+    }
+</style>
