@@ -8,8 +8,6 @@
     <div class="todolist-body">
 
         
-
-        
         <!-- Task Input-->
         <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
             <input class= "task-input" @bind="newTask" placeholder="Enter new task..."/>
@@ -39,10 +37,10 @@
 
         <!-- Outer Container Table --> 
         <div style="display: flex; gap: 1rem;min-height: 440px;
-                    width: 700px;">
+                    width: 50rem;">
 
             <!-- Left Side of Table -->
-            <div style="width: 50%">    
+            <div style="width: 45%; margin-left: 0;">    
 
                 <!-- Title Open -->
                 <h4 class="column-title-open">Open</h4>
@@ -110,7 +108,7 @@
 
 
             <!-- Right Side of Table -->
-            <div style="width: 50%">    
+            <div style="width: 45%;margin-right: 0;">    
 
                 <!-- Title Open -->
                 <h4 class="column-title-done">Done</h4>
@@ -175,7 +173,83 @@
 </div>
 
 
+
+<div class="page-text-box">
+    <div class="text">
+       <h1 id="todo-list-blazor-webapp">ToDo List – Blazor WebApp</h1>
+        <p>This is a simple to-do list implemented as a Blazor component in C#. Users can add and delete tasks, assign priorities, and move tasks between &quot;open&quot; and &quot;done&quot; using drag and drop. Task filtering by status and priority is also available.</p>
+        <hr>
+        <h2 id="author">Author</h2>
+        <p><strong>ZsoltF94</strong><br>GitHub: <a href="https://github.com/ZsoltF94/contacts">github.com/ZsoltF94/contacts</a></p>
+        <hr>
+        <h2 id="features">Features</h2>
+        <ul>
+        <li>Create tasks with:<ul>
+        <li>Title</li>
+        <li>Description</li>
+        <li>Priority (e.g., &quot;normal&quot;, &quot;high&quot;, etc.)</li>
+        </ul>
+        </li>
+        <li>Delete tasks</li>
+        <li>Change task status</li>
+        <li>Filter by:<ul>
+        <li>Status (all, open, done)</li>
+        <li>Priority</li>
+        </ul>
+        </li>
+        <li>Pure client-side Blazor component (no JavaScript required)</li>
+        </ul>
+        <hr>
+        <h2 id="technologies">Technologies</h2>
+        <ul>
+        <li>Blazor WebAssembly</li>
+        <li>C#</li>
+        <li>No external libraries or frameworks required</li>
+        </ul>
+        <hr>
+        <h2 id="project-structure">Project Structure</h2>
+        <pre><code>ToDo<span class="hljs-selector-class">.razor</span>         <span class="hljs-comment">// UI component</span>
+        ToDo<span class="hljs-selector-class">.razor</span><span class="hljs-selector-class">.cs</span>      <span class="hljs-comment">// Component logic (code-behind)</span>
+        TaskItem<span class="hljs-selector-class">.cs</span>        <span class="hljs-comment">// Task data model</span>
+        <hr>
+        </code></pre><h2 id="usage">Usage</h2>
+        <ol>
+        <li>Integrate into a Blazor WebAssembly app (e.g., place in <code>Pages/ToDo.razor</code>)</li>
+        <li>Run the app using <code>dotnet run</code> or through Visual Studio</li>
+        <li>Open the <code>/ToDo</code> page in your browser</li>
+        </ol>
+        <hr>
+        <h2 id="notes">Notes</h2>
+        <ul>
+        <li>Drag and drop is to be added in the future.</li>
+        <li>Tasks are not persisted (no LocalStorage or backend).</li>
+        <li>The component is modular and can be extended or embedded in larger projects.</li>
+        </ul>
+        <hr>
+        <h2 id="license">License</h2>
+        <p>MIT – free to use and modify.</p>
+
+
+    </div>
+</div>
+
+
 <style>
+    .page-text-box{        
+        width: 50rem;
+        margin: 50px auto; 
+       
+        height: auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.37);
+        border-radius: 20px;
+        box-shadow: 0 0 15px 4px rgba(123, 175, 224, 0.13);       
+    }
+
+    .text{
+        color: white;
+    }
+
     .delete-btn{ 
         background-color: rgb(220, 20, 60);
         color: aliceblue;
@@ -230,10 +304,11 @@
 
     .todolist-body{
         
-        width: 742px;
+        width: 50rem;
         padding: 20px;
         min-height: 70vh;
         align-items: center;
+        justify-content: center;
         background-color: rgba(0, 0, 0, 0.233);
         border-radius: 10px;
         box-shadow: 0 0 15px 4px rgba(83, 125, 145, 0.123);
